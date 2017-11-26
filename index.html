@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div id="home">
+  <h1 id="intro">近期</h1>
+  <div>
+  </div>
+  {% for post in site.posts limit:5 %}
+  <div class="post">
+    <h2><a href="{{ post.url }}">{{post.title}}</a></h2>
+    <span class="date">{{ post.date | date:"%B %d, %Y" }}</span>
+    {{ post.excerpt }}
+  </div>
+  {% endfor %}
+
+  <div id="related">
+      <h2>相关</h2>
+      <ul class="posts small">
+        {% for post in site.posts offset:5 limit:3 %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+  </div>
+</div>

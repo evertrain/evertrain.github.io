@@ -1,0 +1,10 @@
+# Site settings
+title: EverTrain 
+email: EverTrain@163.com
+description: 刻意练习
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://blog.evertrain.cn" # the base hostname & protocol for your site
+github_username: evertrain 
+
+# Build settings
+markdown: kramdown
